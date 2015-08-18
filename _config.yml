@@ -1,0 +1,12 @@
+# Site settings
+title: Aishwarya Prem Renu
+email: apremrenu@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Personal website of Ice ice baby
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  aishprr
+
+# Build settings
+markdown: kramdown
