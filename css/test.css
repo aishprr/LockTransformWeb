@@ -1,0 +1,22 @@
+.fullWidthSectionBG { 
+  background: pink;
+  margin-left: -1600px;
+  margin-right: -1600px;
+}
+
+.fullWidthSection { padding-right: 1600px; margin-left: 1600px; }
+
+#page-body-wrapper {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#page-body { max-width: 1200px; padding: 0px 50px 0px 50px; }
+
+#aboutparah, #about { 
+    background-color: green ;
+}
+
+
+
+font-family: 'Josefin Slab', serif;

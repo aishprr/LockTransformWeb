@@ -47,3 +47,20 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+.site-content {
+    
+    background: #3cb349;
+}
