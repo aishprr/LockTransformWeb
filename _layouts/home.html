@@ -18,8 +18,8 @@
     <p>When it comes to mutexes, their implementations can be broadly divided into two types:</p>
 
     <ul>
-      <li>Blocking: Threads are descheduled while waiting</li>
-      <li>Busy-wait: Threads test shared variables which indicate the status of the lock</li>
+      <li>Blocking: <ul>Threads are descheduled while waiting</ul></li>
+      <li>Busy-wait: <ul>Threads test shared variables which indicate the status of the lock</ul></li>
     </ul>
     <p>Based on how the lock is implemented, there are varying effects on different kinds of workloads. A busy-wait implementation has much worse effects on performance and proessor utilization if all the threads using the lock are on the same core vs when the thread making progress is on a different core from those waiting for the lock. They also perform diffenttly based on the length of the critical section.</p>
     <p>I would like to analyse different implementations and compare them against Pthread and OpenMP implementation along the following dimensions:</p>
