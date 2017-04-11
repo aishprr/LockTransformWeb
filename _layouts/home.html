@@ -22,15 +22,22 @@
       <li>Busy-wait: <ul>Threads test shared variables which indicate the status of the lock</ul></li>
     </ul>
     <p>Based on how the lock is implemented, there are varying effects on different kinds of workloads. A busy-wait implementation has much worse effects on performance and proessor utilization if all the threads using the lock are on the same core vs when the thread making progress is on a different core from those waiting for the lock. They also perform diffenttly based on the length of the critical section.</p>
-    <p>I would like to analyse different implementations and compare them against Pthread and OpenMP implementation along the following dimensions:</p>
+    <p>I would like to analyse different implementations and compare them against Pthread and OpenMP implementation along at least the following dimensions for each workload:</p>
     <ul>
-      <li>Processor Utilization:</li>
-      <li>Performance: Speed of completion of the program, and individual threads</li>
-      <li>Average latency for lock </li>
+      <li>Processor Utilization: <ul>This refers to how many (and on which cores) and how long execution contexts on cores are active. This allows us to determine power savings aspects of the workloads</ul></li>
+      <li>Performance: <ul>Speed of completion of the program, and individual threads</ul></li>
+      <li>Average latency for grabbing lock <ul>How long different thread have to wait for from time of requesting lock to entering the critical section</ul></li>
+    </ul>
+    <p>The above dimensions will be compared for workloads varying in at least the following ways:</p>
+    <ul>
+      <li>Length of critical sections</li>
+      <li>Number of threads and lockers</li>
+      <li>Distribution of threads to cores</li>
     </ul>
     <h2>The Challenge</h2>
 
-    <p>The sub-navigation is automatically generated using a little JS based on the H1 and H2 tags in your markdown file. The goal was to make it a quick <code>and exciting</code> way to write a markdown file and create an amazing pages site.  </p>
+    <p>In order to succeed at measuring along the above dimensions, I will initially need to implement the different constructs as well as design workloads that will meaningfully test the above</p>
+    <p>I plan on having at least one implementation of each primitive using transactions instead coarse-grained locks using Intel's TS Extensions and since I have not worked with that before, it serves aa major challenge.</p>
 
     <h2>Resources</h2>
 
