@@ -11,6 +11,7 @@
     <h2>Summary</h2>
     <p>LockTransformLib will be a Concurrency Library with different implementations of mutexes, condition variables, semaphores and readers-writers locks.</p> 
     <p>I will be analysing their performance along parameters such as fairness, average latency and processor utilization with implementations of different data structures using a test suite consisting of varying workloads.</p>
+    <p>If time permits, I plan on switching between implementations during execution (similar to how pthread mutexes are implemented) based on observed workload - for example between a tradition lock based to a transactions based implementation.</p>
 
     <h2>Background</h2>
 
@@ -36,12 +37,14 @@
     </ul>
     <h2>The Challenge</h2>
 
-    <p>In order to succeed at measuring along the above dimensions, I will initially need to implement the different constructs as well as design workloads that will meaningfully test the above</p>
-    <p>I plan on having at least one implementation of each primitive using transactions instead coarse-grained locks using Intel's TS Extensions and since I have not worked with that before, it serves aa major challenge.</p>
+    <p>In order to succeed at measuring along the above dimensions, I will initially need to implement the different constructs as well as design workloads that will meaningfully test them.</p>
+    <p>Implementing a measuring framework while not affecting the results will also be a challenge.</p>
+    <p>I plan on having at least one implementation of each primitive using transactions instead of coarse-grained locks using Intel's TS Extensions and since I have never worked with them before, that serves as one of the major challenges as well.</p>
+    <p>
 
     <h2>Resources</h2>
 
-    <p>The sub-navigation is automatically generated using a little JS based on the H1 and H2 tags in your markdown file. The goal was to make it a quick <code>and exciting</code> way to write a markdown file and create an amazing pages site.  </p>
+    <p>I will be using  </p>
 
 
     <h2>Goals and Deliverables</h2>
@@ -50,7 +53,7 @@
 
     <h2>Platform Choice</h2>
 
-    <p>The sub-navigation is automatically generated using a little JS based on the H1 and H2 tags in your markdown file. The goal was to make it a quick <code>and exciting</code> way to write a markdown file and create an amazing pages site.  </p>
+    <p>I plan to use the Intel Xeon Phi processors for testing and measurements (available for access in the latedays cluster.) I will be implementing the library and tests in C++.</p>
 
 
     <h2>Schedule</h2>
