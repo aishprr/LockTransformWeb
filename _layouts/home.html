@@ -15,17 +15,18 @@
     <h2>Background</h2>
 
     <p>Common multi-threaded programs have areas of contention where different threads need to access / modify a shared data structure. In such cases, concurrency management objects like locks are used. I have used those implemented for use with Pthreads and OpenMP constructs as well as implemented these in both user- and kernel-space in 15-410.</p>
-    <p>There are three main requirements for a critical section that we can use to evaluate such an object for example, a mutex:</p>
-    <ul>
-      <li>Mutual Exclusion</li>
-      <li>Progress</li>
-      <li>Bounded Waiting</li>
-    </ul>
-    <p></p>
+    <p>When it comes to mutexes, their implementations can be broadly divided into two types:</p>
 
     <ul>
-      <li>Hack by <a href="https://github.com/bleikamp">Ben Bleikamp</a></li>
-      <li>Merlot by <a href="https://github.com/cameronmcefee">Cameron McEfee</a></li>
+      <li>Blocking: Threads are descheduled while waiting</li>
+      <li>Busy-wait: Threads test shared variables which indicate the status of the lock</li>
+    </ul>
+    <p>Based on how the lock is implemented, there are varying effects on different kinds of workloads. A busy-wait implementation has much worse effects on performance and proessor utilization if all the threads using the lock are on the same core vs when the thread making progress is on a different core from those waiting for the lock. They also perform diffenttly based on the length of the critical section.</p>
+    <p>I would like to analyse different implementations and compare them against Pthread and OpenMP implementation along the following dimensions:</p>
+    <ul>
+      <li>Processor Utilization:</li>
+      <li>Performance: Speed of completion of the program, and individual threads</li>
+      <li>Average latency for lock </li>
     </ul>
     <h2>The Challenge</h2>
 
