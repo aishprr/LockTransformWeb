@@ -8,30 +8,26 @@
 
   <section>
     <h1>LockTransform</h1>
-    <p>LockTransformLib will be a Concurrency Library with different implementations of mutexes, condition variables, semaphores and readers-writers locks.</p> 
-    <p>I will be analysing their performance along parameters such as fairness, average latency and processor utilization with implementations of different data structures using a test suite consisting of varying workloads</p>
-
+    
     <h2>Summary</h2>
+    <p>LockTransformLib will be a Concurrency Library with different implementations of mutexes, condition variables, semaphores and readers-writers locks.</p> 
+    <p>I will be analysing their performance along parameters such as fairness, average latency and processor utilization with implementations of different data structures using a test suite consisting of varying workloads.</p>
 
-    <p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your page content will be preserved if it remained in markdown format.</p>
+    <h2>Background</h2>
+
+    <p>Common multi-threaded programs have areas of contention where different threads need to access / modify a shared data structure. In such cases, concurrency management objects like locks are used. I have used those implemented for use with Pthreads and OpenMP constructs as well as implemented these in both user- and kernel-space in 15-410.</p>
+    <p>There are three main requirements for a critical section that we can use to evaluate such an object for example, a mutex:</p>
+    <ul>
+      <li>Mutual Exclusion</li>
+      <li>Progress</li>
+      <li>Bounded Waiting</li>
+    </ul>
+    <p></p>
 
     <ul>
       <li>Hack by <a href="https://github.com/bleikamp">Ben Bleikamp</a></li>
       <li>Merlot by <a href="https://github.com/cameronmcefee">Cameron McEfee</a></li>
-      <li>Slate by <a href="https://github.com/jsncostello">Jason Costello</a></li>
-      <li>Time Machine by <a href="https://github.com/jonrohan">Jon Rohan</a></li>
-      <li>Leap Day by <a href="https://github.com/mattgraham">Matt Graham</a></li>
-      <li>Midnight by <a href="https://github.com/mattgraham">Matt Graham</a></li>
-      <li>Minimal by <a href="https://github.com/orderedlist">Steve Smith</a></li>
-      <li>Modernist by <a href="https://github.com/orderedlist">Steve Smith</a></li>
     </ul>
-
-    <p>For more info on GitHub Pages, check out <a href="http://pages.github.com/">pages.github.com</a>. For help, check the <a href="http://help.github.com/pages">GitHub Pages documentation</a>.</p>
-
-    <h2>Background</h2>
-
-    <p>The sub-navigation is automatically generated using a little JS based on the H1 and H2 tags in your markdown file. The goal was to make it a quick <code>and exciting</code> way to write a markdown file and create an amazing pages site.  </p>
-
     <h2>The Challenge</h2>
 
     <p>The sub-navigation is automatically generated using a little JS based on the H1 and H2 tags in your markdown file. The goal was to make it a quick <code>and exciting</code> way to write a markdown file and create an amazing pages site.  </p>
