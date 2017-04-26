@@ -110,6 +110,9 @@
     <br>
 
     <h2>Progress</h2>
+    <p>So far, I have been able to implement different kinds of mutexes, my own implementations and implementations from a paper that I read previously. I also tested them with multiple tests all spawning threads using openmp, and confirmed that they satisfy mutual exclusion, bounded waiting as well as progress.</p>
+    <p>I also have an initial trial implementation (untested) using 1 trial transaction XBEGIN call after which any abort would require the need to hold a lock. However, because of the case where even at the point of an abort, there might be a successful thread making progress, and committing changes to memory, there are a few edge cases (like nested transactions upto an architecture determined limited) that I still need to handle and confirm with tests.</p>
+    <p></p>
 
     <h2>Deliverables</h2>
     <h2>Presentation</h2>
