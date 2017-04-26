@@ -130,7 +130,7 @@
     </tr>
     <tr>
       <td width="20%">Apr 25-27</td>
-      <td width="80%">Finish the simple and transactions based implementations fo mutexes</td> 
+      <td width="80%">Finish the simple and transactions based implementations for mutexes</td> 
     </tr>
     <tr>
       <td width="20%">Apr 28-30</td>
@@ -157,7 +157,8 @@
     <h2>Concerns</h2>
     Some concerns I have are the following:
     <ul>
-    <li>The implementation of the transactions based locks is more architecture dependent than I thought it to be previously, and would need to </li>
+    <li>The implementation of the transactions based locks is more architecture dependent than I thought it to be previously, and I need to dig more deeply into Intel's suggestions document to understand more deeply some of the decisions taken in order to not violate any mutual exclusion properties</li>
+    <li>I am also worried about the accurately implementing back-off for some of the mutex implementations which depend on proportional back-off thereby possibly causing varying results</li>
     </ul>
 
     </section>
